@@ -1,4 +1,4 @@
-# 🧭 Browsebox 
+# Browsebox 
 
 **Browsebox** is a simple Chrome Extension that allows you to collect, view, copy, and export all open tab URLs. It's useful for saving your browsing sessions or sharing links in bulk.
 
