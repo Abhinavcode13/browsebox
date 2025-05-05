@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "BrowseBox",
+  "version": "1.1.0",
+  "description": "BrowseBox saves active tab URLs with a single click.",
+  "permissions": [
+    "tabs",
+    "downloads",
+    "storage",
+    "clipboardWrite",
+    "activeTab",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "Lock.png",
+      "32": "Lock.png",
+      "48": "Lock.png",
+      "128": "Lock.png"
+    }
+  },
+  "icons": {
+    "16": "Lock.png",
+    "32": "Lock.png",
+    "48": "Lock.png",
+    "128": "Lock.png"
+  },
+  "commands": {
+    "capture-tabs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Save tabs to clipboard and storage"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 
