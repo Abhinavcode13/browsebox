@@ -1,36 +1,43 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToHowItWorks = () => {
+    const howItWorksSection = document.querySelector('#how-it-works');
+    howItWorksSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter animate-fade-in">
-            <span className="bg-gradient-to-r from-[#F97316] to-[#ea384c] bg-clip-text text-transparent">BrowseBox</span>
+    <section className="relative py-8 md:py-16 lg:py-20 overflow-hidden">
+      <div className="container px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8 lg:gap-16 min-h-[60vh]">
+        {/* Left: Headline, Subtitle, Buttons */}
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-6 md:space-y-8 max-w-2xl mx-auto md:mx-0">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Tabs? Organized. Mind? Blown.
           </h1>
-          <p className="text-2xl md:text-3xl font-medium text-white/80 max-w-2xl mx-auto animate-float-up">
-            The missing link in your knowledge management system
+          <p className="text-lg md:text-2xl text-white/70 max-w-xl">
+            Capture, organize, and access your browser tabs with ease.
           </p>
-          <p className="text-lg text-white/60 max-w-3xl mx-auto animate-float-up" style={{ animationDelay: '0.2s' }}>
-            Instantly capture, organize, and access your browser tabs, transforming them into a searchable knowledge vault.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-float-up" style={{ animationDelay: '0.3s' }}>
-            <Button size="lg" className="bg-gradient-to-r from-[#F97316] to-[#ea384c] text-white hover:opacity-90 transition-opacity">
-              Download BrowseBox
-              <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto justify-center md:justify-start">
+            <Button size="lg" className="bg-gradient-to-r from-[#F97316] to-[#ea384c] text-white hover:opacity-90 transition-opacity font-semibold px-8 py-3" onClick={scrollToHowItWorks}>
+              Get Started Free
             </Button>
-            <Button size="lg" variant="outline" className="border-white/10 text-white hover:bg-white/5">
-              Learn More
-            </Button>
+            <a
+              href="https://github.com/Abhinavcode13/browsebox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-3">
+                Go to GitHub
+              </Button>
+            </a>
           </div>
         </div>
+        {/* Right: Security SVG Illustration */}
+        <div className="flex-1 flex justify-center md:justify-end items-center">
+          <img src="/Security.svg" alt="Security Illustration" className="w-72 md:w-[28rem] lg:w-[36rem] max-w-full drop-shadow-xl animate-fade-in" />
+        </div>
       </div>
-      
-      {/* Gradient orbs in background */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-browsebox-blue/20 rounded-full blur-[100px] -z-10"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-browsebox-purple/20 rounded-full blur-[100px] -z-10"></div>
     </section>
   );
 };

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'Segoe UI', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -67,7 +69,7 @@ export default {
 					blue: '#6d8aff',
 					purple: '#9b87f5',
 					pink: '#ff6d9f',
-					dark: '#121212',
+					dark: '#11181c',
 					'dark-accent': '#1A1A1A',
 					'gray-light': '#a0a0a0',
 					'gray-dark': '#505050'
