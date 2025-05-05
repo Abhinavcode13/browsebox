@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter animate-fade-in">
-            <span className="text-gradient">BrowseBox</span>
+            <span className="bg-gradient-to-r from-[#F97316] to-[#ea384c] bg-clip-text text-transparent">BrowseBox</span>
           </h1>
           <p className="text-2xl md:text-3xl font-medium text-white/80 max-w-2xl mx-auto animate-float-up">
             The missing link in your knowledge management system
@@ -17,7 +17,7 @@ const HeroSection = () => {
             Instantly capture, organize, and access your browser tabs, transforming them into a searchable knowledge vault.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-float-up" style={{ animationDelay: '0.3s' }}>
-            <Button size="lg" className="bg-gradient-to-r from-browsebox-blue to-browsebox-purple text-white hover:opacity-90 transition-opacity">
+            <Button size="lg" className="bg-gradient-to-r from-[#F97316] to-[#ea384c] text-white hover:opacity-90 transition-opacity">
               Download BrowseBox
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
